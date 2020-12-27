@@ -13,11 +13,9 @@ exports.checkUser = [
   check("password", "password is required")
     .notEmpty()
     .isLength({
-      min: 6,
+      min: 5,
     })
-    .withMessage("Password must contain at least 6 characters")
-    .matches(/\d/)
-    .withMessage("password must contain a number")
+    .withMessage("Password must contain at least 5 characters")
 ];
 
 exports.isRequestValidated = (req, res, next) => {

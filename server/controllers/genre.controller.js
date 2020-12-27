@@ -3,10 +3,7 @@ const {Genre} = require("../models/genre.model");
 //READ (GET)
 exports.getAllGenre = async (req, res) => {
   const genre = await Genre.find().sort("name");
-  res.status(200).json({
-    status: "success",
-    data: genre,
-  });
+  res.status(200).send(genre);
 };
 
 //CREATE (POST)
